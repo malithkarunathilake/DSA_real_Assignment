@@ -149,7 +149,7 @@ public class RealEstate {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		addbtnNewButton_1.addMouseListener(new MouseAdapter() {  // add data to arraylist
+		addbtnNewButton_1.addMouseListener(new MouseAdapter() {  
 			@Override
 			public void mouseClicked(MouseEvent arg0){				
 			}
