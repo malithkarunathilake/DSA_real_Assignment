@@ -216,7 +216,42 @@ public class RealEstate {
 		JButton deletebtnNewButton_4 = new JButton("Delete");
 		deletebtnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-			}
+				
+			if(!estateList.isEmpty()){  // have to be used isEmpty method to empty data from the arraylist temparaly 
+					//Last object
+					if(displayedEstate==estateList.size()-1){
+						estateList.remove(displayedEstate);
+																		
+						lotnumbertextField.setText("");
+						firstnametextField_1.setText("");
+						lastnametextField_2.setText("");
+						pricetextField_3.setText("");
+						squafeattextField_4.setText("");
+						numberofbedtextField_5.setText("");
+						//displayedEstate++;			
+					}else{
+						estateList.remove(displayedEstate);
+						
+						lotnumbertextField.setText(estateList.get(displayedEstate).getLotno());
+						firstnametextField_1.setText(estateList.get(displayedEstate).getFname());
+						lastnametextField_2.setText(estateList.get(displayedEstate).getLname());
+						pricetextField_3.setText(String.valueOf(estateList.get(displayedEstate).getPrice()));
+						squafeattextField_4.setText(String.valueOf(estateList.get(displayedEstate).getSquare_feet()));
+						numberofbedtextField_5.setText(String.valueOf(estateList.get(displayedEstate).getNo_of_bedroom()));
+						//displayedEstate++;
+					}
+				}else{
+					lotnumbertextField.setText("");
+					firstnametextField_1.setText("");
+					lastnametextField_2.setText("");
+					pricetextField_3.setText("");
+					squafeattextField_4.setText("");
+					numberofbedtextField_5.setText("");
+				}
+			}	
+				
+				
+			
 		});
 		deletebtnNewButton_4.addMouseListener(new MouseAdapter() {
 			@Override
