@@ -137,6 +137,7 @@ public class RealEstate {
 		ResetbtnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
+				displayedEstate = -1;
 			}
 		});
 		ResetbtnNewButton.setBackground(new Color(144, 238, 144));
