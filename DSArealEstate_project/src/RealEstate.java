@@ -102,7 +102,7 @@ public class RealEstate {
 		frmRealEstate.getContentPane().add(squafeattextField_4);
 		squafeattextField_4.setColumns(10);
 		
-		JLabel lblMessages = new JLabel("Messages");
+		JLabel lblMessages = new JLabel(lotnumbertextField.getText());
 		lblMessages.setFont(new Font("Tahoma", Font.ITALIC, 12));
 		lblMessages.setBackground(new Color(244, 164, 96));
 		lblMessages.setBounds(61, 11, 272, 26);
@@ -151,7 +151,15 @@ public class RealEstate {
 		});
 		addbtnNewButton_1.addMouseListener(new MouseAdapter() {  
 			@Override
-			public void mouseClicked(MouseEvent arg0){				
+			public void mouseClicked(MouseEvent arg0){
+				
+				double prz = Double.parseDouble(pricetextField_3.getText());
+		double sqr = Double.parseDouble(squafeattextField_4.getText());
+		int nob = Integer.parseInt(numberofbedtextField_5.getText());
+				
+				List_House copy = new List_House(lotnumbertextField.getText(), firstnametextField_1.getText(), lastnametextField_2.getText(),prz, sqr, nob);
+				estateList.add(copy);
+				
 			}
 		});
 		
@@ -163,6 +171,13 @@ public class RealEstate {
 		JButton clearbtnNewButton_2 = new JButton("Clear");
 		clearbtnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+			lotnumbertextField.setText("");	
+			firstnametextField_1.setText("");
+			lastnametextField_2.setText("");
+			pricetextField_3.setText("");
+			squafeattextField_4.setText("");
+			numberofbedtextField_5.setText("");
 				
 			}
 		});
