@@ -151,7 +151,15 @@ public class RealEstate {
 		});
 		addbtnNewButton_1.addMouseListener(new MouseAdapter() {  
 			@Override
-			public void mouseClicked(MouseEvent arg0){				
+			public void mouseClicked(MouseEvent arg0){
+				
+				double prz = Double.parseDouble(pricetextField_3.getText());
+		double sqr = Double.parseDouble(squafeattextField_4.getText());
+		int nob = Integer.parseInt(numberofbedtextField_5.getText());
+				
+				List_House copy = new List_House(lotnumbertextField.getText(), firstnametextField_1.getText(), lastnametextField_2.getText(),prz, sqr, nob);
+				estateList.add(copy);
+				
 			}
 		});
 		
